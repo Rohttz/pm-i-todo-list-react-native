@@ -1,8 +1,14 @@
-import { Text, Card } from "react-native-paper";
+import { Text, Card, Button as PButton } from "react-native-paper";
 import { View, StyleSheet } from "react-native";
 import { formatDateTime } from '../utils/date';
+import { useNavigation } from '@react-navigation/native';
 
 export default function TaskDetail({ task }) {
+    const navigation = useNavigation();
+
+    const onEditHandler = () => {
+        navigation.navigate('TaskEdit', { task });
+    };
 
     return (
         <View style={styles.container}>
@@ -40,6 +46,15 @@ export default function TaskDetail({ task }) {
                             {formatDateTime(task.completedDate)}
                         </Text>
                     </View>
+                    <View style={styles.buttonContainer}>
+                        <PButton 
+                            mode="contained" 
+                            onPress={onEditHandler}
+                            icon="pencil"
+                        >
+                            Editar Tarefa
+                        </PButton>
+                    </View>
                 </Card.Content>
             </Card>
         </View>
@@ -72,5 +87,9 @@ const styles = StyleSheet.create({
     value: {
         color: '#555555',
         lineHeight: 24,
+    },
+    buttonContainer: {
+        marginTop: 16,
+        alignItems: 'center',
     },
 });

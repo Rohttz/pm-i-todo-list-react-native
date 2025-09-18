@@ -7,8 +7,3 @@ export const store = configureStore({
         tasks: tasksReducer
     }
 });
-
-// store.subscribe(() => {
-//     console.log('store: ', store.getState().tasks);
-//     AsyncStorage.setItem('@TASKS', JSON.stringify(store.getState().tasks));
-// });

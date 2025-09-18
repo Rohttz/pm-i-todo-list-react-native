@@ -4,9 +4,8 @@ import { Button as PButton, ActivityIndicator } from "react-native-paper";
 import { globalStyles } from "../styles/globalStyles.jsx";
 import { useNavigation } from "@react-navigation/native";
 import { useDispatch, useSelector } from "react-redux";
-import { finishTask, initTasks, removeAllTasks, removeTask, selectTasks, selectError, selectLoading } from '../store/features/taskSlice.js'
+import { finishTask, initTasks, clearTasks, removeTask, selectTasks, selectError, selectLoading } from '../store/features/taskSlice.js'
 import { useEffect } from "react";
-import taskService from "../services/taskService.js";
 
 export default function TaskList() {
   const navigation = useNavigation();
@@ -29,7 +28,7 @@ export default function TaskList() {
   };
 
   const onRemoveTaskHandler = (task) => {
-    dispatch(removeTask(task))
+    dispatch(removeTask(task.id))
   };
 
   const onClickDetailHandler = (task) => {
@@ -38,7 +37,7 @@ export default function TaskList() {
     })
   }
 
-  const onRemoveAllHandler = () => dispatch(removeAllTasks());
+  const onRemoveAllHandler = () => dispatch(clearTasks());
 
   return (
     <>

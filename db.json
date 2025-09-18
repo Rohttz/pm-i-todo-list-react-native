@@ -1,19 +1,35 @@
 {
   "tasks": [
     {
+      "id": "67f2",
       "name": "Tarefa 1",
       "description": "Tarefa 1",
-      "done": true,
-      "id": "fc1a",
-      "createdDate": "2025-09-04T22:56:11.663Z",
-      "completedDate": "2025-09-04T22:59:00.440Z"
+      "done": false,
+      "createdDate": "2025-09-18T23:14:36.459Z"
     },
     {
+      "id": "340d",
       "name": "Tarefa 2",
       "description": "Tarefa 2",
-      "done": false,
-      "id": "fc1c",
-      "createdDate": "2025-09-04T22:56:11.663Z"
+      "done": true,
+      "createdDate": "2025-09-18T23:14:41.169Z",
+      "completedDate": "2025-09-18T23:14:49.858Z"
+    },
+    {
+      "id": "28db",
+      "name": "Tarefa 3 Editada",
+      "description": "Tarefa 3 Editada",
+      "done": true,
+      "createdDate": "2025-09-18T23:14:48.170Z",
+      "completedDate": "2025-09-18T23:15:06.347Z"
+    },
+    {
+      "id": "a7c9",
+      "name": "Tarefa 4 Editada após conclusão",
+      "description": "Tarefa 4",
+      "done": true,
+      "createdDate": "2025-09-18T23:15:19.938Z",
+      "completedDate": "2025-09-18T23:15:22.906Z"
     }
   ],
   "reminders": []
